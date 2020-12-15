@@ -1,8 +1,18 @@
+html, body {
+	height: 100%;
+}
+
 body {
+	display: flex;
+	flex-direction: column;
 	color: #8d8d8d;
 	font-size: 16px;
 	line-height: 1.5;
 	@extend %quicksand-500;
+}
+
+.main {
+	flex-grow: 1;
 }
 
 .container {
@@ -10,3 +20,12 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+a {
+	color: #8d8d8d;
+	font-size: 16px;
+	line-height: 1.5;
+	@extend %quicksand-500;
+	font-style: normal;
+}
+
