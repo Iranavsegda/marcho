@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -26,7 +27,7 @@
 
 	&__link {
 		color: $title-color;
-		padding-bottom: 6px;
+		padding-bottom: 0 2px 1px;
 		border-bottom: 2px solid transparent;
 		transition: border-color 0.8s;
 		@extend %roboto-400;
@@ -69,6 +70,109 @@
 		line-height: 20px;
 	}
 }
+
+.button-buy {
+	color: #fff;
+	border: none;
+	padding: 12px 18px;
+	background-color: $accent-color;
+	@extend %roboto-400;
+	text-transform: uppercase;
+	box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+	cursor: pointer;
+}
+
+.top-slider {
+	background-image: url(../images/bg-top-slider.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $bg;
+	padding: 65px 0 45px;
+
+	&__container {
+		max-width: 1560px;
+	}
+
+	&__content {
+		padding-left: 180px;
+	}
+
+	&__title {
+		max-width: 670px;
+		@extend %roboto-700;
+		font-size: 58px;
+		line-height: 68px;
+		color: $title-color;
+		margin-bottom: 35px;
+	}
+
+	&__text {
+		max-width: 470px;
+		margin-bottom: 55px;
+	}
+
+	&__link {
+		padding: 14px 36px;
+	}
+
+	&__item {
+		display: flex !important;
+		justify-content: space-between;
+	}
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin-top: -70px;
+	li {
+		padding: 0 5px;
+		button {
+			padding: 0;
+			font-size: 0;
+			background-color: transparent;
+			width: 29px;
+			height: 29px;
+			border: 1px solid transparent;
+			border-radius: 50%;
+			position: relative;
+			outline: transparent;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				background-color: $default-color;
+				border-radius: 50%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&.slick-active {
+			button {
+				border-color: $accent-color;
+				&::before {
+					background-color: $accent-color;
+				}
+			}
+		}
+	}
+}
+
+.circle {
+	border-width: 1px;
+	border-color: rgb(254, 62, 87);
+	border-style: solid;
+	position: absolute;
+	left: 898px;
+	top: 740px;
+	width: 29px;
+	height: 29px;
+	z-index: 470;
+}
+
+
 
 .footer {
 	background-color: $bg;
@@ -160,17 +264,6 @@
 			font-size: 16px;
 		}
 	}
-
-	&__btn {
-		border: none;
-		background-color: $accent-color;
-		text-transform: uppercase;
-		color: #fff;
-		padding: 12px 18px;
-		box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-		cursor: pointer;
-	}
-
 }
 
 .footer-bottom {
@@ -179,7 +272,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 12px;
-	
+
 	&__accept-img {
 		display: inline-block;
 		margin-left: 25px;
