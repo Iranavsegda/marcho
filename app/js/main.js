@@ -17,7 +17,7 @@ $(function(){
 		  readOnly: true
 		});
 	  
-	 });
+	 })
 
 	 function getTimeRemaining(endtime) {
 		const total = Date.parse(endtime) - Date.parse(new Date());
@@ -35,7 +35,7 @@ $(function(){
 		};
 	 }
 	 
-	 function initializeClock(endtime) {
+	 function initializeClock(id, endtime) {
 		const clock = document.querySelector('.promo__clock');
 		const daysSpan = clock.querySelector('.promo__days');
 		const hoursSpan = clock.querySelector('.promo__hours');
@@ -59,8 +59,7 @@ $(function(){
 		const timeinterval = setInterval(updateClock, 1000);
 	 }
 	 
-	 const deadline = '2021-06-25';
+	 const deadline = $('.promo__clock').attr('data-time');
 	 initializeClock('promo__clock', deadline);
-
 
 });
