@@ -344,12 +344,13 @@
 .product {
 	text-align: center;
 	padding: 105px 120px;
-	
+
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 45px 30px;
 	}
+
 	&__link {
 		text-transform: uppercase;
 		color: $title-color;
@@ -363,6 +364,7 @@
 .product-item {
 	max-width: 370px;
 	text-align: center;
+
 	&__img-box {
 		position: relative;
 		height: 370px;
@@ -402,17 +404,19 @@
 		right: 70px;
 
 	}
+
 	&__link--line::after {
 		left: 70px;
 	}
 
 	&__link {
 		display: inherit;
+
 		path {
-		transition: all 0.3s;
+			transition: all 0.3s;
 		}
 	}
-	
+
 	&__link:hover {
 		path {
 			fill: $accent-color;
@@ -433,16 +437,19 @@
 		color: $title-color;
 		padding: 15px 0 20px;
 	}
+
 	&__price {
 		@extend %roboto-400;
 		display: flex;
 		justify-content: center;
 	}
+
 	&__new-price {
 		padding: 0 12px;
 		color: $title-color;
 
 	}
+
 	&__old-price {
 		padding: 0 12px;
 		text-decoration: line-through;
@@ -462,6 +469,74 @@
 
 .star {
 	margin: 0 auto;
+}
+
+.promo {
+	background-image: url(../images/promo-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 150px 0 160px;
+	text-align: center;
+
+	&__inner {
+		max-width: 570px;
+		width: 100%;
+		margin-left: auto;
+	}
+
+	&__subtitle {
+		color: $accent-color;
+		text-transform: uppercase;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	&__clock {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 55px;
+	}
+
+	&__clock-item {
+		background-color: #fff;
+		height: 120px;
+		width: 120px;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+		
+		span {
+			font-size: 48px;
+			color: $title-color;
+			@extend %roboto-700;
+			margin-top: 10px;
+			line-height: 1;
+		}
+	}
+
+
+
+	&__link {
+		text-transform: uppercase;
+		color: $title-color;
+		display: inline-block;
+		border: 1px solid $accent-color;
+		padding: 14px 27px;
+		margin-top: 55px;
+	}
+}
+
+.partners {
+	padding-top: 75px;
+	&__list {
+		height: 170px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 
