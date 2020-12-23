@@ -507,7 +507,7 @@
 		flex-direction: column;
 		justify-content: center;
 		box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
-		
+
 		span {
 			font-size: 48px;
 			color: $title-color;
@@ -531,6 +531,7 @@
 
 .partners {
 	padding-top: 75px;
+
 	&__list {
 		height: 170px;
 		display: flex;
@@ -538,6 +539,127 @@
 		align-items: center;
 	}
 }
+
+
+.blog {
+	padding: 50px 0 160px;
+	background-image: url(../images/blog/blogbg.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		&::after {
+			content: '';
+			background-image: url(../images/blog/blogDecor.svg);
+			position: absolute;
+			top: -25px;
+			right: -20px;
+			width: 126px;
+			height: 53px;
+			z-index: -1;
+		}
+	}
+
+	&__item {
+		max-width: 370px;
+		border: 1px solid #ececec;
+		padding-bottom: 30px;
+		transition: box-shadow 0.5s;
+
+		&:hover {
+			box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+			border: none;
+
+			.blog__item-link {
+				color: $accent-color;
+
+				&::after {
+					background-image: url(../images/blog/arrow-accent.svg);
+				}
+			}
+		}
+	}
+
+	&__item-imglink {
+		margin-bottom: 30px;
+		display: block;
+
+		img {
+			height: 288px;
+			object-fit: cover;
+		}
+	}
+
+	&__item-box {
+		padding: 30px 40px;
+	}
+
+	&__item-info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	&__item-author,
+	&__item-data {
+		padding-left: 30px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__item-author::before {
+		background-image: url(../images/blog/iconuser.svg);
+	}
+
+	&__item-data::before {
+		background-image: url(../images/blog/time.svg);
+	}
+
+	&__item-title {
+		color: $title-color;
+		@extend %roboto-400;
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	&__item-link {
+		position: relative;
+	}
+
+	&__item-link::after {
+		content: '';
+		background-image: url(../images/blog/arrow.svg);
+		width: 10px;
+		height: 8px;
+		position: absolute;
+		top: 8px;
+		right: -14px;
+	}
+}
+
+.BG {
+	background-color: rgb(255, 255, 255);
+
+	position: absolute;
+	left: 375px;
+	top: 5688px;
+	width: 370px;
+	height: 478px;
+	z-index: 115;
+}
+
 
 
 
